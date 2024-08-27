@@ -1,0 +1,98 @@
+#accordion-card-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 3rem 0;
+}
+
+.accordion-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 4rem;
+  padding: 1rem;
+}
+
+.accordion-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .accordion {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .accordion-header {
+    background-color: #f7f7f7;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .accordion-content {
+    padding: 10px;
+  }
+  
+  form div {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+.image-preview img {
+  margin: 5px 0;
+  display: block;
+}
+  
+
+
+/* Responsive styles */
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 600px) {
+  .accordion-header h3 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .accordion-container {
+    max-width: 600px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .accordion-container {
+    max-width: 800px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .accordion-container {
+    max-width: 1000px;
+  }
+}
+
+  

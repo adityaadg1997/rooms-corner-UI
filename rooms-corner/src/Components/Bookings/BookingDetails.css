@@ -1,0 +1,129 @@
+/* Container for the entire booking form */
+.booking-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  font-family: sans-serif;
+  background-color: #f0f4fa; /* Light background color for better contrast */
+}
+
+/* Each section of the form */
+.booking-details,
+.customer-details,
+.billing-address,
+.payment-details {
+  flex: 1 1 300px;
+  padding: 30px; /* Increased padding for better spacing */
+  margin-bottom: 20px; /* Added margin for vertical spacing */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white; /* White background for sections */
+}
+
+/* Hotel information styling */
+.hotel-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hotel image styling */
+.hotel-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hotel-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px; /* Slightly round the corners of the image */
+}
+
+/* Input field container styling */
+.input-field {
+  margin-bottom: 15px; /* Increased margin for better spacing */
+}
+
+/* Label styling */
+.input-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold; /* Make labels bold */
+  color: #333; /* Darker color for better readability */
+}
+
+/* Input and textarea styling */
+.input-field input,
+.input-field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1rem; /* Consistent font size */
+  background-color: #f9f9f9; /* Light background for inputs */
+}
+
+/* Payment details styling */
+.payment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Payment item styling */
+.payment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payment-item p {
+  font-weight: bold;
+}
+
+.payment-item span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Highlight total amount */
+.payment-item.total span {
+  font-size: 1.2rem;
+  color: #ff5733; /* Make the total amount more prominent */
+}
+
+/* Proceed to pay button styling */
+.proceed-to-pay {
+  padding: 15px 25px; /* Larger padding for a more prominent button */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1.1rem; /* Larger font size for better visibility */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.proceed-to-pay:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .booking-form-container {
+    flex-direction: column;
+  }
+
+  .booking-details,
+  .customer-details,
+  .billing-address,
+  .payment-details {
+    flex: 1 1 auto;
+    margin-bottom: 20px; /* Added margin for spacing */
+  }
+
+  .hotel-image img {
+    max-height: 200px; /* Reduce image height on mobile */
+  }
+}

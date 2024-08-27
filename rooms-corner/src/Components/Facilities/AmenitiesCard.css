@@ -1,0 +1,62 @@
+#amenities-card-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 3rem 0;
+}
+
+/* Container styles */
+.amenities-card-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+
+.amenities-card-heading {
+  line-height: 45px;
+  margin-inline-start: 5px;
+}
+
+.amenities-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+.amenities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  justify-items: center;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive styles */
+
+@media (min-width: 768px) {
+  .amenities-card-container {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 992px) {
+  .amenities-card-container {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .amenities-card-container {
+    max-width: 1000px;
+  }
+}

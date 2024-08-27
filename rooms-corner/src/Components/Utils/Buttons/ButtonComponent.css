@@ -1,0 +1,30 @@
+.normal-btn {
+  background-color: #4195d1;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.normal-btn:hover {
+  background-color: #3e92cf;
+}
+
+.border-outLine-btn {
+  /* float: left; */
+  float: inline-end;
+  background-color: #fff;
+  color: #4195d1;
+  border: 1px solid #4195d1;
+  font-weight: normal;
+  padding: 10px 20px;
+  cursor: pointer;
+  line-height: 1;
+  border-radius: 4px;
+}
+
+.border-outLine-btn:hover {
+  background-color: #fff;
+}
