@@ -14,99 +14,103 @@ import i from "./assets/cardsAssets/9.jpg";
 import j from "./assets/cardsAssets/10.jpg";
 import SearchBar from "../../Components/Search/SearchBar/SearchBar";
 import Footer from "../../Components/Footer/Footer";
+import HotelsListPage from "../Hotels/HotelsListPage";
 
 const Home = () => {
-  const cardsData = [
-    {
-      title: "Veena Sadan",
-      location: "United Kingdom, Isle Of Skye",
-      rating: 9.0,
-      reviewCount: 149,
-      image: a,
-    },
-    {
-      title: "Waldschenke Stendenitz Übernachten im Wald am See",
-      location: "Germany, Neuruppin, ",
-      rating: 9.4,
-      reviewCount: 62,
-      image: b,
-    },
-    {
-      title: "Domki ROSSE niedaleko plaży",
-      location: "Poland, Jastrzębia Góra",
-      rating: 9.8,
-      reviewCount: 134,
-      image: c,
-    },
-    {
-      title: "Casaprisco",
-      location: "Netherlands, Putten",
-      rating: 9.2,
-      reviewCount: 77,
-      image: d,
-    },
-    {
-      title: "Harbor View 1",
-      location: "United Kingdom, Isle Of Skye",
-      rating: 9.0,
-      reviewCount: 149,
-      image: e,
-    },
-    {
-      title: "Casa Rural La Marquesa",
-      location: "Spain, Valera de Abajo",
-      rating: 9.4,
-      reviewCount: 62,
-      image: f,
-    },
-    {
-      title: "Domki ROSSE niedaleko plaży 1",
-      location: "Poland, Jastrzębia Góra",
-      rating: 9.8,
-      reviewCount: 134,
-      image: g,
-    },
-    {
-      title: "Casaprisco 1",
-      location: "Netherlands, Putten",
-      rating: 9.2,
-      reviewCount: 77,
-      image: h,
-    },
-    {
-      title: "Casaprisco 2",
-      location: "Netherlands, Putten",
-      rating: 9.2,
-      reviewCount: 77,
-      image: i,
-    },
-    {
-      title: "Casaprisco 3",
-      location: "Netherlands, Putten",
-      rating: 9.2,
-      reviewCount: 77,
-      image: j,
-    },
-  ];
+  // const cardsData = [
+  //   {
+  //     title: "Veena Sadan",
+  //     location: "United Kingdom, Isle Of Skye",
+  //     rating: 9.0,
+  //     reviewCount: 149,
+  //     image: a,
+  //   },
+  //   {
+  //     title: "Waldschenke Stendenitz Übernachten im Wald am See",
+  //     location: "Germany, Neuruppin, ",
+  //     rating: 9.4,
+  //     reviewCount: 62,
+  //     image: b,
+  //   },
+  //   {
+  //     title: "Domki ROSSE niedaleko plaży",
+  //     location: "Poland, Jastrzębia Góra",
+  //     rating: 9.8,
+  //     reviewCount: 134,
+  //     image: c,
+  //   },
+  //   {
+  //     title: "Casaprisco",
+  //     location: "Netherlands, Putten",
+  //     rating: 9.2,
+  //     reviewCount: 77,
+  //     image: d,
+  //   },
+  //   {
+  //     title: "Harbor View 1",
+  //     location: "United Kingdom, Isle Of Skye",
+  //     rating: 9.0,
+  //     reviewCount: 149,
+  //     image: e,
+  //   },
+  //   {
+  //     title: "Casa Rural La Marquesa",
+  //     location: "Spain, Valera de Abajo",
+  //     rating: 9.4,
+  //     reviewCount: 62,
+  //     image: f,
+  //   },
+  //   {
+  //     title: "Domki ROSSE niedaleko plaży 1",
+  //     location: "Poland, Jastrzębia Góra",
+  //     rating: 9.8,
+  //     reviewCount: 134,
+  //     image: g,
+  //   },
+  //   {
+  //     title: "Casaprisco 1",
+  //     location: "Netherlands, Putten",
+  //     rating: 9.2,
+  //     reviewCount: 77,
+  //     image: h,
+  //   },
+  //   {
+  //     title: "Casaprisco 2",
+  //     location: "Netherlands, Putten",
+  //     rating: 9.2,
+  //     reviewCount: 77,
+  //     image: i,
+  //   },
+  //   {
+  //     title: "Casaprisco 3",
+  //     location: "Netherlands, Putten",
+  //     rating: 9.2,
+  //     reviewCount: 77,
+  //     image: j,
+  //   },
+  // ];
 
-  const cData = {
-    title: "Veena Sadan",
-    location: "United Kingdom, Isle Of Skye",
-    rating: 9.0,
-    reviewCount: 149,
-    image: a,
-  };
+  // const cData = {
+  //   title: "Veena Sadan",
+  //   location: "United Kingdom, Isle Of Skye",
+  //   rating: 9.0,
+  //   reviewCount: 149,
+  //   image: a,
+  // };
 
   return (
     <>
       <Base />
       <SearchBar />
-      <CardSliderComponent cardsData={cardsData} />
+      {/* <CardSliderComponent cardsData={cardsData} />
       <div>
         <CardComponent cardData={cData} />
       </div>
       <div>
         <CardComponent cardData={cData} />
+      </div> */}
+      <div>
+        <HotelsListPage />
       </div>
       <Footer />
     </>

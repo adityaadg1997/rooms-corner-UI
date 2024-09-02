@@ -13,6 +13,7 @@ import UserListPage from "../Pages/UserDashboard/UserListPage";
 import BookingsPage from "../Pages/Bookings/BookingsPage";
 import QrCodePage from "../Pages/Payment/QrCodePage";
 import LargeCard from "../Components/Cards/LargeCard/LargeCard";
+import HotelDetailsPage from "../Pages/Hotels/HotelDetailsPage";
 
 function Routes() {
   return (
@@ -29,6 +30,7 @@ function Routes() {
           <Route path="/bookingDetails" element={<BookingsPage />} />
           <Route path="/qrCode" element={<QrCodePage />} />
           <Route path=":hotelId" element={<LargeCard />} />
+          <Route path="/hotel/:hotelId" element={<HotelDetailsPage />} />
         </RoutesTo>
       </Router>
     </>

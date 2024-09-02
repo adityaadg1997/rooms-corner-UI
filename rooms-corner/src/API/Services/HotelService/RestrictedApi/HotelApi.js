@@ -30,7 +30,7 @@ export const getHotelByLocationId = async (locationId) => {
   }
 };
 
-export const getAllHotel = async () => {
+export const getAllHotels = async () => {
   try {
     const response = await restrictedApi.get(`/hotel/`);
     return response.data;

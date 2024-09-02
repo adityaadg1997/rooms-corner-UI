@@ -23,7 +23,7 @@ const CardSliderComponent = ({ cardsData }) => {
         </button>
         <div className="property-slider-container" ref={slider}>
           {cardsData.map((property) => (
-            <CardComponent key={property.title} cardData={property} />
+            <CardComponent key={property.hotelId} cardData={property} />
           ))}
         </div>
         <button

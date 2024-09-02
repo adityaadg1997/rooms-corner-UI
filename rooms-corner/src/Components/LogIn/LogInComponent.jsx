@@ -15,7 +15,7 @@ const LogInComponent = (props) => {
       const user = { email, password };
       const response = await userLogin(user);
       console.log("User successfully Logged-In:", response);
-      document.cookie = `token=${response.token}; expires=Thu, 01 Jan 2026 00:00:00 UTC; path=/`;
+      document.cookie = `token=${response.token}; expires=Thu, 01 Jan 2026 00:00:00 UTC; path=/; SameSite=Lax; Secure`;
 
       // Optionally, you can redirect the user to another page after successfull login
       navigate("/");
@@ -61,8 +61,7 @@ const LogInComponent = (props) => {
           </div>
           <div>
             <p className="login__signup">
-              You do not have an account?{" "}
-              <Link to={"/register"}>Sign up</Link>
+              You do not have an account? <Link to={"/register"}>Sign up</Link>
             </p>
             <Link to={"/"} className="login__forgot">
               You forgot your password

@@ -10,21 +10,18 @@ export const restrictedApi = axios.create({
   baseURL: API_URL,
 });
 
-{
-  /* Retrieve the token from the cookie */
-}
-const cookies = document.cookie.split(";");
-let jwtToken = null;
-cookies.forEach((cookie) => {
-  const [name, value] = cookie.trim().split("=");
-  if (name === "token") {
-    jwtToken = value;
-  }
-});
+// Helper Function to Get Cookies
+const getCookie = (name) => {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(";").shift();
+  return null;
+};
 
+// Axios Interceptor
 restrictedApi.interceptors.request.use(
   (config) => {
-    const token = jwtToken;
+    const token = getCookie("token");
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -34,3 +31,6 @@ restrictedApi.interceptors.request.use(
     return Promise.reject(error);
   }
 );
+
+userApi.defaults.withCredentials = true;
+restrictedApi.defaults.withCredentials = true;

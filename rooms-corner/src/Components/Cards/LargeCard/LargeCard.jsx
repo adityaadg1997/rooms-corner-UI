@@ -10,8 +10,8 @@ const LargeCard = (props) => {
         <div className="large-card">
           {props.titlePosition === "top" && (
             <div className="content-container">
-              <h2>{props.title}</h2>
-              <p>{props.location}</p>
+              <h2>{props.hotelName}</h2>
+              <p>{props.locationId}</p>
             </div>
           )}
 
@@ -34,8 +34,8 @@ const LargeCard = (props) => {
           )}
           {props.titlePosition != "top" && (
             <div className="content-container">
-              <h2>{props.title}</h2>
-              <p>{props.location}</p>
+              <h2>{props.hotelName}</h2>
+              <p>{props.locationId}</p>
               <div className="rating-container">
                 <span>9.8</span>
                 <span>Exceptional</span>

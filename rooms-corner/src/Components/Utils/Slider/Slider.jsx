@@ -9,9 +9,7 @@ const Slider = ({ hotelImages }) => {
   };
 
   const previousSlide = () => {
-    setStartIndex(
-      (startIndex - 1 + hotelImages.length) % hotelImages.length
-    );
+    setStartIndex((startIndex - 1 + hotelImages.length) % hotelImages.length);
   };
 
   const isPreviousDisabled = startIndex === 0;
@@ -23,13 +21,26 @@ const Slider = ({ hotelImages }) => {
         <div className="slider">
           <div className="slides">
             {hotelImages.map((image, index) => (
-              <img key={index} src={image.image} alt="Image" className={`slide ${index === startIndex ? "active" : ""}`} />
+              <img
+                key={index}
+                src={image}
+                alt="Image"
+                className={`slide ${index === startIndex ? "active" : ""}`}
+              />
             ))}
           </div>
-          <button className="slide-prev" onClick={previousSlide} disabled={isPreviousDisabled}>
+          <button
+            className="slide-prev"
+            onClick={previousSlide}
+            disabled={isPreviousDisabled}
+          >
             &#10094;
           </button>
-          <button className="slide-next" onClick={nextSlide} disabled={isNextDisabled}>
+          <button
+            className="slide-next"
+            onClick={nextSlide}
+            disabled={isNextDisabled}
+          >
             &#10095;
           </button>
         </div>
