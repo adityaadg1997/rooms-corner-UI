@@ -23,12 +23,17 @@ const HotelsListPage = () => {
 
   return (
     <>
-    <div>{hotelList && <CardSliderComponent cardsData={hotelList} />}</div>
+      <div>{hotelList && <CardSliderComponent cardsData={hotelList} />}</div>
 
-    <div>Single Card Data</div>
-    {hotelList && hotelList.map((hotel) => (
-      <CardComponent key={hotel.hotelId} cardData={hotel}/>
-    ))}
+      <div>
+        <h1>Hotel Gallery</h1>
+        <section style={{display: "flex", alignContent: "center", flexDirection: "row",flexWrap: "wrap", justifyContent: "center"}}>
+          {hotelList &&
+            hotelList.map((hotel) => (
+              <CardComponent key={hotel.hotelId} cardData={hotel} />
+            ))}
+        </section>
+      </div>
     </>
   );
 };

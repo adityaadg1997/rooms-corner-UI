@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "../assets/CardComponent.css";
 import { useNavigate } from "react-router-dom";
 import { getHotelImageUrlsByHotelId } from "../../../API/Services/Helper/Image/Image.helper.service";
 import loading from "../Card/loadingGif.gif";
-
+import "../assets/HotelCardComponent.css";
 const CardComponent = ({ cardData }) => {
   const [images, setImages] = useState([]);
   const navigate = useNavigate();
@@ -21,29 +20,28 @@ const CardComponent = ({ cardData }) => {
         setImages(response);
       } catch (error) {
         console.log("Failed to load Hotel Image Urls By Hotel Id:", error);
-        // Optionally set a fallback image or handle the error UI-wise
       }
     };
 
     loadHotelImageUrlsByHotelId();
   }, [cardData.hotelId]);
 
-  const firstImage = images?.[0] || loading; // Provide a fallback image
+  const firstImage = images?.[0] || loading;
 
   return (
-    <div className="property-card" onClick={handleClick}>
+    <div className="hotel-card" onClick={handleClick}>
       <img
         src={firstImage}
         alt={cardData.hotelName}
-        className="property-image"
+        className="hotel-card-image"
       />
-      <div className="property-info">
-        <h3 className="property-title">{cardData.hotelDescription}</h3>
-        <p className="property-location">{cardData.locationId}</p>
-        <div className="property-rating">
-          <span className="rating-number">{cardData.rating}</span>
-          <span className="rating-star">★</span>
-          <span className="review-count">({cardData.reviewCount} reviews)</span>
+      <div className="hotel-card-info">
+        <h3 className="hotel-card-title">{cardData.hotelDescription}</h3>
+        <p className="hotel-card-location">{cardData.locationId}</p>
+        <div className="hotel-card-rating">
+          <span className="hotel-rating-number">{cardData.rating}</span>
+          <span className="hotel-rating-star">★</span>
+          <span className="hotel-review-count">({cardData.reviewCount} reviews)</span>
         </div>
       </div>
     </div>

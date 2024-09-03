@@ -1,0 +1,69 @@
+.hotel-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 8px;
+    box-shadow: 0 2px 8px 0 rgba(26,26,26,0.16);
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+    flex-basis: calc(33.333% - 16px);
+    cursor: pointer;
+  }
+  
+  .hotel-card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .hotel-card-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .hotel-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .hotel-card-location {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .hotel-card-rating {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .hotel-rating-number {
+    font-weight: bold;
+    margin-right: 4px;
+  }
+  
+  .hotel-rating-star {
+    margin-right: 4px;
+  }
+  
+  .hotel-review-count {
+    color: #666;
+    margin-left: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .hotel-card {
+      flex-basis: calc(50% - 16px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hotel-card {
+      flex-basis: 100%;
+    }
+  }
+  
