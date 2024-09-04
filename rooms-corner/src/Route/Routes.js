@@ -14,6 +14,7 @@ import BookingsPage from "../Pages/Bookings/BookingsPage";
 import QrCodePage from "../Pages/Payment/QrCodePage";
 import LargeCard from "../Components/Cards/LargeCard/LargeCard";
 import HotelDetailsPage from "../Pages/Hotels/HotelDetailsPage";
+import AddNewHotels from "../Pages/Hotels/AddNewHotels";
 
 function Routes() {
   return (
@@ -23,6 +24,7 @@ function Routes() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LogInPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/addHotels" element={<AddNewHotels />} />
           <Route path="/findUserInfo" element={<UserDetailsPage />} />
           <Route path="/allBookingByHotel" element={<BookingListByHotelPage />} />
           <Route path="/header" element={<Navbar />} />

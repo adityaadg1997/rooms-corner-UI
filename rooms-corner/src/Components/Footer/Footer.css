@@ -1,9 +1,26 @@
-/* General Styles */
+/* Ensure html and body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main container for the content */
+#root {
+  flex: 1; /* Allows the footer to stay at the bottom by pushing it down */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer Styles */
 .footer {
   background-color: #222;
   color: #fff;
   padding: 40px 0 10px 0;
   text-align: center;
+  margin-top: auto; /* This ensures footer stays at the bottom */
 }
 
 .footer__container {
@@ -86,5 +103,4 @@
   .footer__social-link {
     margin-bottom: 10px;
   }
-  
 }

@@ -35,29 +35,29 @@ const Navbar = () => {
           <div className={`nav__menu ${isMenuOpen ? "show-menu" : ""}`}>
             <ul className="nav__list">
               <li className="nav__item">
-                <a to={"/"} className="nav__link">
+                <Link to={"/"} className="nav__link">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav__item">
-                <a to={"/"} className="nav__link">
+                <Link to={"/"} className="nav__link">
                   About Us
-                </a>
+                </Link>
               </li>
               <li className="nav__item">
-                <a to={"/"} className="nav__link">
-                  Services
-                </a>
+                <Link to={"/addHotels"} className="nav__link">
+                  Publish Hotels
+                </Link>
               </li>
               <li className="nav__item">
-                <a to={"/"} className="nav__link">
+                <Link to={"/"} className="nav__link">
                   Featured
-                </a>
+                </Link>
               </li>
               <li className="nav__item">
-                <a to={"/"} className="nav__link">
+                <Link to={"/"} className="nav__link">
                   Contact Me
-                </a>
+                </Link>
               </li>
             </ul>
             {/* Close button */}
