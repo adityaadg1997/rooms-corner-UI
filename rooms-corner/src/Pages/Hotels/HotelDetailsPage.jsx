@@ -19,6 +19,7 @@ const HotelDetailsPage = () => {
   const loadHotelById = async (hotelId) => {
     try {
       const response = await getHotelById(hotelId);
+      console.log("aditya hotel :", response);
       setHotel(response);
     } catch (error) {
       console.log("Failed to load Hotel By Id:", error);
@@ -39,9 +40,11 @@ const HotelDetailsPage = () => {
       <Base />
       {hotel && (
         <LargeCard
+          hotelId={hotelId}
           hotelName={hotel.hotelName}
           locationId={hotel.locationId}
           hotelImages={images && images}
+          price={hotel.pricePerDay}
         />
       )}
       <Footer />

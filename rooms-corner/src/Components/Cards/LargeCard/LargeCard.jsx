@@ -44,7 +44,7 @@ const LargeCard = (props) => {
               <ButtonComponent
                 width={"100%"}
                 buttonText={"BOOK NOW"}
-                url={"/bookingDetails"}
+                url={"/bookingDetails/" + `${props.hotelId}`}
                 btnType={"border-outLine-btn"}
               />
             </div>

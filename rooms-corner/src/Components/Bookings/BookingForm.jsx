@@ -1,21 +1,21 @@
-import React, { useState, useCallback } from 'react';
-import HotelInfo from './HotelInfo';
-import CustomerDetails from './CustomerDetails';
-import BillingAddress from './BillingAddress';
-import PaymentDetails from './PaymentDetails';
-import './BookingDetails.css';
+import React, { useState, useCallback } from "react";
+import HotelInfo from "./HotelInfo";
+import CustomerDetails from "./CustomerDetails";
+import BillingAddress from "./BillingAddress";
+import PaymentDetails from "./PaymentDetails";
+import "./BookingDetails.css";
 
-const BookingForm1 = () => {
+const BookingForm1 = (props) => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    contact: '',
-    address: '',
-    landmark: '',
-    pincode: '',
-    country: '',
-    state: '',
-    city: '',
+    name: "",
+    email: "",
+    contact: "",
+    address: "",
+    landmark: "",
+    pincode: "",
+    country: "",
+    state: "",
+    city: "",
   });
 
   const handleChange = useCallback((e) => {
@@ -25,16 +25,12 @@ const BookingForm1 = () => {
     }));
   }, []);
 
-  const handleProccedToPay = () => {
-    console.log("Payment Started");
-  };
-
   return (
     <div className="booking-form-container">
-      <HotelInfo />
+      <HotelInfo hotelData={props.hotelInfo} />
       <CustomerDetails formData={formData} handleChange={handleChange} />
       <BillingAddress formData={formData} handleChange={handleChange} />
-      <PaymentDetails handleProccedToPay={handleProccedToPay} />
+      <PaymentDetails allData={formData} price={props.hotelInfo.pricePerDay} />
     </div>
   );
 };

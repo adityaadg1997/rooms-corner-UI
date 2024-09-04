@@ -27,7 +27,7 @@ function Routes() {
           <Route path="/allBookingByHotel" element={<BookingListByHotelPage />} />
           <Route path="/header" element={<Navbar />} />
           <Route path="/userList" element={<UserListPage />} />
-          <Route path="/bookingDetails" element={<BookingsPage />} />
+          <Route path="/bookingDetails/:hotelId" element={<BookingsPage />} />
           <Route path="/qrCode" element={<QrCodePage />} />
           <Route path=":hotelId" element={<LargeCard />} />
           <Route path="/hotel/:hotelId" element={<HotelDetailsPage />} />
