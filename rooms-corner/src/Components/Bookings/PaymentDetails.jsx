@@ -1,7 +1,9 @@
 import React from "react";
-import { createOrder } from "../../API/Services/PaymentService/RestrictedApi/paymentApi";
+import { createOrder, updateOrder } from "../../API/Services/PaymentService/RestrictedApi/paymentApi";
+import { useNavigate } from "react-router-dom";
 
 const PaymentDetails = (props) => {
+  const navigate = useNavigate();
   const orderData = {
     amount: "",
     info: "",
@@ -38,10 +40,13 @@ const PaymentDetails = (props) => {
       image:
         "https://images.unsplash.com/photo-1622964318124-d87cb88d24e2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       order_id: `${response.id}`, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      handler: function (response) {
-        alert(`Payment ID: ${response.razorpay_payment_id}`);
-        alert(`Order ID: ${response.razorpay_order_id}`);
-        alert(`Signature: ${response.razorpay_signature}`);
+      handler: function (response) { //after successful payment, save to DB
+        // alert(`Payment ID: ${response.razorpay_payment_id}`);
+        // alert(`Order ID: ${response.razorpay_order_id}`);
+        // alert(`Signature: ${response.razorpay_signature}`);
+      
+        updatePaymentOnDB(response.razorpay_order_id, response.razorpay_payment_id, 'Paid', response.razorpay_signature);
+        navigate("/");
       },
       prefill: {
         name: `${paymentInfo.name}`,
@@ -71,6 +76,17 @@ const PaymentDetails = (props) => {
 
     rzp1.open();
   };
+
+
+  const updatePaymentOnDB = async (orderId, paymentId, status, signature) => {
+    try {
+      const paymentData = {"razorpay_order_id":orderId,"razorpay_payment_id":paymentId, "status":status,"razorpay_signature":signature};
+      const response =  await updateOrder(paymentData);
+      console.log("order status, paymentId updated", response);
+    } catch (error) {
+      console.log("Something went wrong while updating order status, paymentId !!", error);
+    }
+  }
 
   return (
     <div className="payment-details">
